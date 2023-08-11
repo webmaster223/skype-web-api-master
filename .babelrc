@@ -1,0 +1,37 @@
+{
+  "env": {
+    "test": {
+      "presets": [[
+        "env", {
+          "modules": "commonjs"
+        }
+      ]]
+    },
+    "rollup": {
+      "presets": [[
+        "env", {
+          "modules": false
+        }
+      ]],
+      "plugins": [
+        "external-helpers",
+        "transform-class-properties"
+      ],
+    },
+    "es5": {
+      "presets": [
+        "env"
+      ],
+      "plugins": [
+        "transform-class-properties",
+        "transform-runtime"
+      ]
+    }
+  },
+  "plugins": [
+    "transform-flow-strip-types"
+  ],
+  "ignore": [
+    "lib/*.test.js"
+  ]
+}
